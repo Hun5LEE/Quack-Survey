@@ -1,34 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+    <h1>Quack Survey</h1>
+  <img width=700 src="https://github.com/Quack-Survey/Front/assets/52587871/fe1bc5b3-286e-4fcf-8647-d851c83356c6"/>
+</div>
 
-## Getting Started
+  <br/>
 
-First, run the development server:
+  **이메일 로그인 테스트 계정**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+  |     | 관리자        |
+  | --- | ------------- | 
+  | ID  |  |  |
+  | PW  |  |  |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <br/>
+  <br/>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<br/>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# 목차
+1. [개요](#1-개요)
+2. [기술 스택](#2-기술-스택)
+3. [기능 소개](#3-기능-소개)
+4. [팀 소개](#4-팀-소개)
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+# 1. 개요
+> 일반인들도 전문적으로 설문을 운영할 수 있다!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+편리하게 설문을 기획하고, 응답현황을 관리하고 응답결과를 시각화할 수 있는 서비스입니다.
+세미나/모임 관련 설문조사를 진행하려는 대학생/일반인, 구상 아이템에 대한 수요조사를 사전에 진행해보려는 예비 창업자를 타겟으로 합니다.
+주요 기능은 아래와 같습니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+|기능|설명|
+|-|-|
+|모바일 설문 에디터|모바일에 최적화된 설문개설/편집 에디터|
+|설문 로직 커스텀|문항에 적용할 로직을 간편하고 직관적으로 설정가능|
+|응답현황 모니터링|응답현황을 한 눈에 파악할 수 있도록 시각화|
+|조사결과 시각화|조사결과를 다방면으로 분석할 수 있도록 쿼리필터 기능 지원|
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br/>
+
+# 2. 기술 스택
+<h3>Tech Stack</h3>
+
+![기술스택](https://github.com/Quack-Survey/Front/assets/52587871/a62f1191-79b7-4845-95f4-afb9d5295091)
+
+
+
+<h5>System Architecture</h5>
+
+# 3. 기능 소개
+> 1. 로그인
+> 2. 홈
+> 3. 설문에디팅
+> 4. 대쉬보드
+> 5. [유저단]설문응답화면
+<br/>
+
+## 1. 로그인
+## 2. 홈
+## 3. 설문에디팅
+### ① 문항 CRUD
+- 상태변화에 따른 즉각적인 UI 변경기능
+- 복제. 엔터, 위/아래이동 등 모바일 입력 편의기능
+- 필수응답여부 설정
+
+### ② 문항 DND 
+### ③ 설문 편의기능
+- 데드라인 설정 : 응답수집이 종료될 일자를 설정함
+- 목표 응답수 설정 : 본 설문으로 목표하는 총 응답수를 설정
+- 쿼터비율 설정 : 분석변수의 각 항목별로 목표하는 구성비율을 설정함
+  
+### ④ 로직 설정
+> **용어 정의**
+>
+> 1) 문항 : 질문을 뜻함<br/>
+> 2) 항목 : 문항 내 선택지<br/>
+> 3) (이동)로직 : 유저단에서 보여질 문항의 순서를 정의함. 특정 문항에서 유저가 선택한 항목에 기반해 다음에 표시될 문항을 정하는 규칙<br/>
+
+- 로직 설정 프로세스 구현<br/>
+  (1) 로직적용 항목 선택 : 로직이 적용될 항목을 선택<br/>
+  (2) 링크 문항 선택 : (1)에서 지정된 항목이 실제로 응답자에 의해 선택될 경우, 다음에 표시될 문항을 선택<br/>
+
+- 로직 대쉬보드 : 설정된 로직을 관리자가 이해하기 쉽게 시각화함
+
+|① 문항 CRUD|② 문항 DND |③ 설문 편의기능|④ 로직 설정|
+|-|-|-|-|
+|![문항-DND](https://github.com/Quack-Survey/Front/assets/52587871/bf4229c2-0480-4cb3-b3cc-28e0781231ea)|![문항-DND](https://github.com/Quack-Survey/Front/assets/52587871/bf4229c2-0480-4cb3-b3cc-28e0781231ea)|![문항-DND](https://github.com/Quack-Survey/Front/assets/52587871/bf4229c2-0480-4cb3-b3cc-28e0781231ea)|![문항-DND](https://github.com/Quack-Survey/Front/assets/52587871/bf4229c2-0480-4cb3-b3cc-28e0781231ea)|
+
+
+
+
+
+## 4. 대쉬보드
+## 5. [유저단]설문응답화면
+
+
+
+
+## 🗄️DB 설계
+
+
+# 4. 팀 소개
+<div align="center">
+
+|이재훈|정연우|곽성재|신유정|
+|:-:|:-:|:-:|:-:|
+
+
+
