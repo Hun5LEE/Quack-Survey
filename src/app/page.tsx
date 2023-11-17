@@ -1,3 +1,7 @@
 export default function Home() {
-  return <h1>Test2</h1>;
+  return (
+    <div>
+      <h1 className="m-auto block h-screen w-[360px]">home</h1>
+    </div>
+  );
 }

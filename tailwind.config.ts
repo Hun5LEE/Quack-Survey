@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/hooks/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -23,6 +24,7 @@ const config: Config = {
         "n-blue": "#788ef5",
         "n-purple": "#8564fb",
         "n-red": "#E74C3C",
+        "n-green": "#2ECC71",
         "n-white": "#FFFFFF",
       },
       fontSize: {
